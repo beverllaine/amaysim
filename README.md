@@ -22,4 +22,5 @@ MacOS includes an older version of Python (the system version, usually Python 2.
 
 ### Report file
 
-<img width="1505" alt="test log" src="https://github.com/bevsanoy/practice-amaysim/assets/53328203/d078c1a4-acda-4bda-b121-a3e17e452714">
+<img width="1505" alt="test log" src="https://github.com/beverllaine/amaysim/assets/78627345/bfb21760-3e8e-4e8a-bac5-fdf7a8937672">
+
