@@ -1,4 +1,4 @@
-# practice-amaysim
+# amaysim
 This is a test challenge.
 
 ### Pre-requisite dependecies
@@ -12,7 +12,7 @@ MacOS includes an older version of Python (the system version, usually Python 2.
 
 ### Steps to get the code and run the test:
 1. Clone repo with HTTP or SSH
-2. After cloning the repository locally, `cd practice-amaysim`/
+2. After cloning the repository locally, `cd amaysim`/
 3. Use Pip to install Robot Framework and its dependencies.
     * command: $ pip install -r requirements.txt
 4. Verify if Robot Framework was successfully installed.
