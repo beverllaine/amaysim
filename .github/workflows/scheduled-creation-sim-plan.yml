@@ -1,0 +1,47 @@
+name: Scheduled Creation of Sim Plan
+
+on:
+  schedule:
+    - cron: "0 23 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: repo_name/path_of_actions_to_import
+          ref: some_reference
+          token: some_token
+
+      - name: Setup python3
+        uses: some_repo_of_actions_script/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Cache Robot Framework dependencies
+        uses: some_repo_of_actions_script/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-3-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-3-pip-
+
+      - name: Run Creation of 7 Days Sim Plan in FireFox
+        uses: some_repo_of_actions_script
+        with:
+          name: Creation of 7 Days Sim Plan
+          git-token: some_token
+          git-path: some_repo_name
+          git-ref: some_ref
+          pabot-tags: "create-mobile-plan"
+          pabot-processes: 10
+          artifact-name: some-artifact-name
+          secrets-pass: some_pass
+          slack-token: some_token
+          slack-conversations: some_key
+          slack-default-mention: some_key
+          slack-minimal: true
